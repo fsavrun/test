@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Reviews Extractor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 Reviews Extractor</h1>
+      <p class="subtitle">Extract Google Reviews easily</p>
+    </header>
+
+    <div id="status" class="status"></div>
+
+    <div class="controls">
+      <button id="extractBtn" class="btn btn-primary">
+        <span class="icon">🔍</span>
+        Extract Reviews
+      </button>
+
+      <button id="scrollLoadBtn" class="btn btn-secondary">
+        <span class="icon">📜</span>
+        Load More Reviews
+      </button>
+    </div>
+
+    <div id="stats" class="stats hidden">
+      <div class="stat-item">
+        <span class="stat-value" id="reviewCount">0</span>
+        <span class="stat-label">Reviews Found</span>
+      </div>
+    </div>
+
+    <div id="reviewsContainer" class="reviews-container hidden">
+      <div class="reviews-header">
+        <h2>Extracted Reviews</h2>
+        <div class="export-buttons">
+          <button id="copyJsonBtn" class="btn btn-small">📋 Copy JSON</button>
+          <button id="copyCsvBtn" class="btn btn-small">📊 Copy CSV</button>
+          <button id="downloadBtn" class="btn btn-small">💾 Download</button>
+        </div>
+      </div>
+      <div id="reviewsList" class="reviews-list"></div>
+    </div>
+
+    <div id="noReviews" class="no-reviews hidden">
+      <p>No reviews found on this page.</p>
+      <p class="hint">Make sure you're on a Google Maps page with reviews visible.</p>
+    </div>
+
+    <footer>
+      <p>Works on Google Maps & Google Search</p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
